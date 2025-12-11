@@ -21,5 +21,11 @@
 
 2) 
 - DDD : Agrégat de Product et les services d'application dans le product-registry-domain-service
-- CQRS : les services métier 
-- Projection :  
+- CQRS : grâce aux services métier eventLog.append et outbox.publish
+- Projection : 
+
+3) Elle fournit le squelette du modèle CQRS du projet.  
+Utilisé, pour le modules métiers, avec EventEnvelope pour les emballer les événements générés par le domaine et appellent OutboxRepository pour les publier.  
+Pour le modules de lectures c'est avec Projector.
+
+4) Elle gère et centralise les versions des dépendances pour l'ensembre du repo
